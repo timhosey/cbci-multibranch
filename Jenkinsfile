@@ -11,9 +11,7 @@ podTemplate(label: 'k8s-agent', containers: [
         env.ALLOW_CONCURRENT_BUILDS = allowConcurrentBuilds()
         stage('Example Stage') {
           // Your pipeline steps here
-          if (env.ALLOW_CONCURRENT_BUILDS == false) {
-            echo "Concurrent builds should be disabled: ${String.valueOf(env.ALLOW_CONCURRENT_BUILDS)}"
-          }
+          echo "Concurrent builds: ${String.valueOf(env.ALLOW_CONCURRENT_BUILDS)}"
           echo 'Executing pipeline steps'
           sh "sleep 10"
         }
