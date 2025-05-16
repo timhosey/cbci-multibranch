@@ -23,7 +23,7 @@ podTemplate(label: 'k8s-agent', containers: [
           // Your pipeline steps here
           echo "Concurrent builds: ${String.valueOf(env.ALLOW_CONCURRENT_BUILDS)}"
           echo 'Executing pipeline steps'
-          sh "sleep 10"
+          sh "sleep 120"
         }
       }
     }
