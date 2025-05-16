@@ -12,7 +12,7 @@ podTemplate(label: 'k8s-agent', containers: [
         stage('Example Stage') {
           // Your pipeline steps here
           echo 'Executing pipeline steps'
-          sh "sleep 120"
+          sh "sleep 10"
         }
       }
     }
